@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Assessment - Question 3</title>
+    <link rel="stylesheet" href="assessment.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Career Guidance System</h1>
+    <p>Your Path to a Bright Future</p>
+</header>
+
+<nav>
+    <a href="home.html">Home</a>
+</nav>
+
+<div class="assessment-container">
+
+    <h2>Career Assessment</h2>
+
+    <p>Question 3 of 3</p>
+
+    <form id="question3">
+
+        <div class="question">
+            <h3>Which skills do you have?</h3>
+
+            <label>
+                <input type="checkbox" name="interest" value="programming">
+                Programming
+            </label>
+
+            <label>
+                <input type="checkbox" name="interest" value="analysis">
+                Analytical Thinking
+            </label>
+
+            <label>
+                <input type="checkbox" name="interest" value="leadership">
+                Leadership
+            </label>
+
+            <label>
+                <input type="checkbox" name="interest" value="teaching">
+                Teaching and Explaining
+            </label>
+
+            <label>
+                <input type="checkbox" name="interest" value="security">
+                Security and Technology
+            </label>
+        </div>
+
+        <button type="submit" class="submit-btn">
+            See My Career
+        </button>
+
+    </form>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Career Guidance System | All Rights Reserved</p>
+</footer>
+
+<script>
+
+document.getElementById("question3").addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    let selected = [];
+
+    document.querySelectorAll('input[name="interest"]:checked')
+    .forEach(function(checkbox) {
+        selected.push(checkbox.value);
+    });
+
+    if (selected.length === 0) {
+        alert("Please select at least one option.");
+        return;
+    }
+
+    localStorage.setItem("question3", JSON.stringify(selected));
+
+    window.location.href = "result.html";
+
+});
+
+</script>
+
+</body>
+</html>

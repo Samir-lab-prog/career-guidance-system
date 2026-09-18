@@ -1,0 +1,13 @@
+.get-started-btn{
+    display:inline-block;
+    padding:12px 25px;
+    background:#004aad;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+    font-size:18px;
+}
+
+.get-started-btn:hover{
+    background:#022d63;
+}

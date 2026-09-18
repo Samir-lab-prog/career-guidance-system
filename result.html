@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Career Recommendations</title>
+
+    <link rel="stylesheet" href="assessment.css">
+
+    <style>
+
+        .result-card {
+            background: white;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .result-card h3 {
+            color: #004aad;
+            margin-bottom: 10px;
+        }
+
+        .result-card p {
+            margin-bottom: 8px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background: #004aad;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .back-btn:hover {
+            background: #022d63;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>Career Guidance System</h1>
+
+    <p>Your Path to a Bright Future</p>
+
+</header>
+
+<nav>
+
+    <a href="home.html">Home</a>
+
+</nav>
+
+<div class="assessment-container">
+
+    <h2>Your Career Recommendations</h2>
+
+    <p>Based on your interests and skills, you may explore these careers.</p>
+
+    <div id="results"></div>
+
+    <a href="home.html" class="back-btn">
+        Back to Home
+    </a>
+
+</div>
+
+<footer>
+
+    <p>&copy; 2026 Career Guidance System | All Rights Reserved</p>
+
+</footer>
+
+<script>
+
+    // Get answers from all three questions
+
+    let answers1 = JSON.parse(localStorage.getItem("question1")) || [];
+
+    let answers2 = JSON.parse(localStorage.getItem("question2")) || [];
+
+    let answers3 = JSON.parse(localStorage.getItem("question3")) || [];
+
+    // Combine all answers
+
+    let selectedAnswers = answers1.concat(answers2, answers3);
+
+
+    // Career database
+
+    let careers = {
+
+        "Web Developer": {
+            skills: ["technology", "coding", "programming"],
+            description: "Build websites and web applications using programming languages and web technologies."
+        },
+
+        "Software Engineer": {
+            skills: ["technology", "coding", "programming", "problem-solving"],
+            description: "Design, develop and maintain software applications."
+        },
+
+        "Data Analyst": {
+            skills: ["mathematics", "analysis", "problem-solving"],
+            description: "Analyze data and help organizations make better decisions."
+        },
+
+        "Doctor": {
+            skills: ["science", "helping"],
+            description: "Diagnose and treat illnesses and help people maintain good health."
+        },
+
+        "Engineer": {
+            skills: ["mathematics", "science", "problem-solving"],
+            description: "Design and develop machines, structures and technical systems."
+        },
+
+        "Teacher": {
+            skills: ["teaching", "helping", "communication"],
+            description: "Educate students and help them develop knowledge and skills."
+        },
+
+        "Graphic Designer": {
+            skills: ["creativity", "design"],
+            description: "Create visual designs for websites, advertisements and digital media."
+        },
+
+        "Accountant": {
+            skills: ["mathematics", "business", "analysis"],
+            description: "Manage financial records, accounts and business transactions."
+        },
+
+        "Digital Marketer": {
+            skills: ["business", "communication", "creativity"],
+            description: "Promote products and services through digital marketing channels."
+        },
+
+        "Cybersecurity Specialist": {
+            skills: ["technology", "security", "problem-solving"],
+            description: "Protect computer systems, networks and data from security threats."
+        }
+
+    };
+
+
+    // Calculate career scores
+
+    let scores = {};
+
+    for (let career in careers) {
+
+        scores[career] = 0;
+
+        careers[career].skills.forEach(function(skill) {
+
+            if (selectedAnswers.includes(skill)) {
+
+                scores[career]++;
+
+            }
+
+        });
+
+    }
+
+
+    // Sort careers according to matching points
+
+    let sortedCareers = Object.entries(scores).sort(function(a, b) {
+
+        return b[1] - a[1];
+
+    });
+
+
+    // Display top 3 careers
+
+    let resultsDiv = document.getElementById("results");
+
+    let topCareers = sortedCareers.slice(0, 3);
+
+    topCareers.forEach(function(career) {
+
+        let careerName = career[0];
+
+        let score = career[1];
+
+        let description = careers[careerName].description;
+
+        resultsDiv.innerHTML += `
+
+            <div class="result-card">
+
+                <h3>${careerName}</h3>
+
+                <p>${description}</p>
+
+                <p><strong>Matching Points:</strong> ${score}</p>
+
+            </div>
+
+        `;
+
+    });
+
+</script>
+
+</body>
+
+</html>
