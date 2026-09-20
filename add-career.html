@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add Career - Admin</title>
+
+    <link rel="stylesheet" href="admin.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>Career Guidance System</h1>
+
+    <p>Administrator Panel</p>
+
+</header>
+
+
+<div class="admin-container">
+
+    <h2 class="admin-title">
+        Add New Career
+    </h2>
+
+
+    <div class="admin-menu">
+
+        <form action="#" method="post">
+
+            <label for="career-name">
+                Career Name
+            </label>
+
+            <input
+                type="text"
+                id="career-name"
+                name="career_name"
+                placeholder="Enter career name"
+                required
+                style="width:100%; padding:12px; margin:10px 0 20px; border:1px solid #ccc; border-radius:5px;"
+            >
+
+
+            <label for="description">
+                Career Description
+            </label>
+
+            <textarea
+                id="description"
+                name="description"
+                placeholder="Enter career description"
+                rows="5"
+                required
+                style="width:100%; padding:12px; margin:10px 0 20px; border:1px solid #ccc; border-radius:5px; resize:vertical;"
+            ></textarea>
+
+
+            <label for="skills">
+                Required Skills
+            </label>
+
+            <input
+                type="text"
+                id="skills"
+                name="skills"
+                placeholder="Example: HTML, CSS, JavaScript, PHP"
+                required
+                style="width:100%; padding:12px; margin:10px 0 20px; border:1px solid #ccc; border-radius:5px;"
+            >
+
+
+            <label for="education">
+                Required Education
+            </label>
+
+            <input
+                type="text"
+                id="education"
+                name="education"
+                placeholder="Example: BCA, BIT, BSc CSIT"
+                required
+                style="width:100%; padding:12px; margin:10px 0 20px; border:1px solid #ccc; border-radius:5px;"
+            >
+
+
+            <label for="scope">
+                Career Scope
+            </label>
+
+            <textarea
+                id="scope"
+                name="scope"
+                placeholder="Enter information about career scope"
+                rows="5"
+                required
+                style="width:100%; padding:12px; margin:10px 0 20px; border:1px solid #ccc; border-radius:5px; resize:vertical;"
+            ></textarea>
+
+
+            <button
+                type="submit"
+                style="background:#004aad; color:white; border:none; padding:12px 25px; border-radius:5px; font-size:16px; cursor:pointer;"
+            >
+                Add Career
+            </button>
+
+
+            <a
+                href="manage-careers.html"
+                style="display:inline-block; margin-left:10px; padding:12px 20px; background:#666; color:white; text-decoration:none; border-radius:5px;"
+            >
+                Cancel
+            </a>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<footer>
+
+    <p>
+        &copy; 2026 Career Guidance System | Admin Panel
+    </p>
+
+</footer>
+
+</body>
+
+</html>

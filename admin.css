@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f7fc;
+    color: #333;
+    min-height: 100vh;
+}
+
+/* Header */
+
+header {
+    background: #004aad;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+/* Admin Login */
+
+.admin-login-container {
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.admin-login-box {
+    width: 100%;
+    max-width: 420px;
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.admin-login-box h2 {
+    text-align: center;
+    color: #004aad;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.admin-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Form */
+
+.admin-login-box label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #022d63;
+}
+
+.admin-login-box input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.admin-login-box input:focus {
+    outline: none;
+    border-color: #004aad;
+    box-shadow: 0 0 5px rgba(0, 74, 173, 0.3);
+}
+
+.admin-login-box button {
+    width: 100%;
+    padding: 13px;
+    background: #004aad;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.admin-login-box button:hover {
+    background: #022d63;
+}
+
+.back-login {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.back-login a {
+    color: #004aad;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-login a:hover {
+    text-decoration: underline;
+}
+
+/* Admin Dashboard */
+
+.admin-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.admin-title {
+    text-align: center;
+    color: #004aad;
+    margin-bottom: 30px;
+}
+
+/* Dashboard Cards */
+
+.dashboard-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.dashboard-card {
+    background: white;
+    width: 250px;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.dashboard-card h3 {
+    color: #004aad;
+    margin-bottom: 10px;
+}
+
+.dashboard-card .number {
+    font-size: 35px;
+    font-weight: bold;
+    color: #022d63;
+}
+
+/* Admin Menu */
+
+.admin-menu {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.admin-menu h2 {
+    color: #004aad;
+    margin-bottom: 20px;
+}
+
+.admin-menu a {
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 5px;
+    background: #004aad;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.admin-menu a:hover {
+    background: #022d63;
+}
+
+/* Tables */
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.admin-table th {
+    background: #004aad;
+    color: white;
+    padding: 14px;
+    text-align: left;
+}
+
+.admin-table td {
+    padding: 14px;
+    border-bottom: 1px solid #ddd;
+}
+
+.admin-table tr:hover {
+    background: #f4f7fc;
+}
+
+/* Buttons */
+
+.edit-btn {
+    background: #004aad;
+    color: white;
+    padding: 7px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.delete-btn {
+    background: #dc3545;
+    color: white;
+    padding: 7px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.add-btn {
+    display: inline-block;
+    background: #004aad;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.add-btn:hover {
+    background: #022d63;
+}
+
+/* Footer */
+
+footer {
+    background: #004aad;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    .dashboard-card {
+        width: 90%;
+    }
+
+    .admin-table {
+        font-size: 14px;
+    }
+
+    .admin-table th,
+    .admin-table td {
+        padding: 8px;
+    }
+}
