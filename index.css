@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f7fc;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+
+header {
+    background: #004aad;
+    color: white;
+    text-align: center;
+    padding: 35px;
+}
+
+header h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 17px;
+}
+
+/* Main section */
+
+.welcome-container {
+    flex: 1;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.welcome-container h2 {
+    color: #004aad;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.welcome-text {
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+/* Options */
+
+.option-container {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.option-box {
+    background: white;
+    width: 350px;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+
+    transition: 0.3s;
+}
+
+.option-box:hover {
+    transform: translateY(-8px);
+}
+
+.option-box h3 {
+    color: #004aad;
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+.option-box p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Buttons */
+
+.option-btn {
+    display: inline-block;
+    padding: 13px 30px;
+
+    background: #004aad;
+    color: white;
+
+    text-decoration: none;
+    border-radius: 5px;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.option-btn:hover {
+    background: #022d63;
+}
+
+/* Footer */
+
+footer {
+    background: #004aad;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    .welcome-container {
+        padding: 45px 20px;
+    }
+
+    .option-container {
+        gap: 30px;
+    }
+
+    .option-box {
+        width: 90%;
+        max-width: 400px;
+    }
+}

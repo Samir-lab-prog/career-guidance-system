@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>User Login - Career Guidance System</title>
+    <title>Admin Login - Career Guidance System</title>
 
     <link rel="stylesheet" href="login.css">
 </head>
@@ -13,30 +13,30 @@
 
 <header>
     <h1>Career Guidance System</h1>
-    <p>Your Path to a Bright Future</p>
+    <p>Administrator Login</p>
 </header>
 
 <div class="login-container">
 
-    <div class="login-box">
+    <div class="login-box admin-login-box">
 
-        <h2>User Login</h2>
+        <h2>Admin Login</h2>
 
         <p class="login-subtitle">
-            Login to continue your career journey
+            Login to manage the Career Guidance System
         </p>
 
-        <form action="home.html">
+        <form action="admin-dashboard.html">
 
-            <label for="email">
-                Email Address
+            <label for="username">
+                Username
             </label>
 
             <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Enter your email"
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Enter admin username"
                 required
             >
 
@@ -48,20 +48,15 @@
                 type="password"
                 id="password"
                 name="password"
-                placeholder="Enter your password"
+                placeholder="Enter admin password"
                 required
             >
 
             <button type="submit">
-                Login
+                Admin Login
             </button>
 
         </form>
-
-        <p class="register-text">
-            Don't have an account?
-            <a href="register.html">Register Now</a>
-        </p>
 
         <p class="register-text">
             <a href="index.html">← Back</a>
