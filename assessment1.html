@@ -27,6 +27,7 @@
     <form id="question1">
 
         <div class="question">
+
             <h3>What subjects do you enjoy?</h3>
 
             <label>
@@ -53,6 +54,7 @@
                 <input type="checkbox" name="interest" value="business">
                 Business and Management
             </label>
+
         </div>
 
         <button type="submit" class="submit-btn">
@@ -67,31 +69,9 @@
     <p>&copy; 2026 Career Guidance System | All Rights Reserved</p>
 </footer>
 
-<script>
 
-document.getElementById("question1").addEventListener("submit", function(event) {
-
-    event.preventDefault();
-
-    let selected = [];
-
-    document.querySelectorAll('input[name="interest"]:checked')
-    .forEach(function(checkbox) {
-        selected.push(checkbox.value);
-    });
-
-    if (selected.length === 0) {
-        alert("Please select at least one option.");
-        return;
-    }
-
-    localStorage.setItem("question1", JSON.stringify(selected));
-
-    window.location.href = "assessment2.html";
-
-});
-
-</script>
+<!-- JavaScript -->
+<script src="js/assessment.js"></script>
 
 </body>
 </html>
