@@ -1,6 +1,7 @@
+```css
 /* ======================================
-   Career Guidance System
-   Front Page CSS
+   CAREER GUIDANCE SYSTEM
+   COMPLETE FRONTEND CSS
    ====================================== */
 
 * {
@@ -16,8 +17,9 @@ body {
     min-height: 100vh;
 }
 
+
 /* ======================================
-   Header
+   HEADER
    ====================================== */
 
 header {
@@ -36,158 +38,408 @@ header p {
     font-size: 17px;
 }
 
+
 /* ======================================
-   Navigation
+   NAVIGATION
    ====================================== */
 
 nav {
-    background: white;
+    background: #022d63;
     text-align: center;
     padding: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 nav a {
+    color: white;
     text-decoration: none;
-    color: #004aad;
     margin: 0 20px;
     font-weight: bold;
 }
 
 nav a:hover {
-    color: #022d63;
+    color: yellow;
 }
 
+
 /* ======================================
-   Hero Section
+   HOME PAGE - HERO
    ====================================== */
 
 .hero {
     text-align: center;
-    padding: 70px 20px;
+    padding: 60px 20px;
 }
 
 .hero h2 {
     color: #004aad;
     font-size: 35px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .hero p {
-    max-width: 700px;
-    margin: auto;
+    font-size: 18px;
+    margin-bottom: 30px;
     line-height: 1.6;
-    font-size: 17px;
 }
 
+
 /* ======================================
-   Get Started Button
+   GET STARTED BUTTON
    ====================================== */
 
-.btn {
+.get-started-btn {
     display: inline-block;
-    margin-top: 25px;
     padding: 12px 25px;
     background: #004aad;
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-.btn:hover {
+.get-started-btn:hover {
     background: #022d63;
 }
 
+
 /* ======================================
-   General Container
+   HOME PAGE - CAREER CARDS
    ====================================== */
 
-.container {
+.careers {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 40px;
+}
+
+.card {
+    background: white;
+    width: 260px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card h3 {
+    color: #004aad;
+    margin-bottom: 15px;
+}
+
+.card p {
+    line-height: 1.6;
+}
+
+
+/* ======================================
+   CAREERS / COURSES PAGE
+   ====================================== */
+
+.page-section {
+    max-width: 1100px;
+    margin: 45px auto;
+    padding: 20px;
+}
+
+.page-section h2 {
+    text-align: center;
+    color: #004aad;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.page-intro {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 35px auto;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+
+/* ======================================
+   CAREER GRID
+   ====================================== */
+
+.career-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+/* ======================================
+   COURSE GRID
+   ====================================== */
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+/* ======================================
+   INFORMATION CARDS
+   ====================================== */
+
+.info-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+    transition: 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-card h3 {
+    color: #004aad;
+    margin-bottom: 15px;
+    font-size: 21px;
+}
+
+.info-card p {
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.info-card strong {
+    color: #004aad;
+}
+
+
+/* ======================================
+   CONTACT PAGE
+   ====================================== */
+
+.contact-section {
+    max-width: 1000px;
+    margin: 45px auto;
+    padding: 20px;
+}
+
+.contact-section h2 {
+    text-align: center;
+    color: #004aad;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+
+/* ======================================
+   CONTACT INFORMATION
+   ====================================== */
+
+.contact-info {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+.contact-info h3 {
+    color: #004aad;
+    margin-bottom: 25px;
+    font-size: 23px;
+}
+
+.contact-info p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.contact-info strong {
+    color: #004aad;
+}
+
+
+/* ======================================
+   CONTACT FORM
+   ====================================== */
+
+.contact-form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+.contact-form form {
+    width: 100%;
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #004aad;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background: #004aad;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #022d63;
+}
+
+
+/* ======================================
+   REGISTER PAGE
+   ====================================== */
+
+.register-container {
     width: 400px;
-    margin: 50px auto;
+    max-width: 90%;
+    margin: 45px auto;
     padding: 30px;
     background: white;
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
 
-.container h2 {
+.register-container h2 {
     text-align: center;
     color: #004aad;
     margin-bottom: 25px;
+    font-size: 28px;
 }
 
-/* ======================================
-   Form
-   ====================================== */
+.register-container form {
+    width: 100%;
+}
 
-.container label {
+.register-container label {
     display: block;
     margin-top: 15px;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
     font-weight: bold;
 }
 
-.container input {
+.register-container input {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 6px;
+    font-size: 14px;
 }
 
-.container button {
+.register-container input:focus {
+    outline: none;
+    border-color: #004aad;
+}
+
+.register-container button {
     width: 100%;
     margin-top: 25px;
     padding: 12px;
     background: #004aad;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
 }
 
-.container button:hover {
+.register-container button:hover {
     background: #022d63;
 }
 
-.container p {
+.register-container p {
     text-align: center;
     margin-top: 20px;
+    line-height: 1.5;
 }
 
-.container a {
+.register-container a {
     color: #004aad;
     text-decoration: none;
     font-weight: bold;
 }
 
-.container a:hover {
+.register-container a:hover {
     text-decoration: underline;
 }
 
+
 /* ======================================
-   Footer
+   FOOTER
    ====================================== */
 
 footer {
     background: #004aad;
     color: white;
     text-align: center;
-    padding: 15px;
+    padding: 20px;
     margin-top: 40px;
 }
 
+
 /* ======================================
-   Responsive Design
+   RESPONSIVE DESIGN
    ====================================== */
 
-@media (max-width: 500px) {
+@media (max-width: 800px) {
 
-    .container {
-        width: 90%;
-        margin: 30px auto;
+    .career-grid,
+    .course-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
 
     header h1 {
         font-size: 26px;
@@ -197,4 +449,24 @@ footer {
         margin: 0 8px;
     }
 
+    .career-grid,
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .careers {
+        padding: 25px 15px;
+    }
+
+    .page-section,
+    .contact-section {
+        padding: 15px;
+    }
+
+    .register-container {
+        width: 90%;
+        padding: 25px;
+    }
+
 }
+```
